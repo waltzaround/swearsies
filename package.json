@@ -1,0 +1,27 @@
+{
+  "name": "swearsies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waltzaround/swearsies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waltzaround/swearsies/issues"
+  },
+  "homepage": "https://github.com/waltzaround/swearsies#readme",
+  "dependencies": {
+    "next": "^9.0.6",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  }
+}
