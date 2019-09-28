@@ -31,6 +31,13 @@ p {
     line-height: 1.5;
 }
 
+h5 {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5
+}
+
 button {
     padding: 1rem;
     font-size: 1.8rem;
