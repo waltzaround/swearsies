@@ -85,7 +85,31 @@ overflow: hidden;
   z-index: 1;
 }
 
+.MonkeyContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  width: 40rem;
+}
 
+.MonkeyHeroImage {
+  margin: 0 auto;
+  object-position: center;
+  justify-items: center;
+  height: 400px;
+}
+
+.MonkeyTotal {
+  margin-top    : 0rem;
+  letter-spacing: -1px;
+  margin-bottom : 0;
+  font-size     : 6rem;
+  text-align: center;
+}
+
+.MonkeySubtitle {
+  text-align: center;
+}
 
 /*
  * Remove text-shadow in selection highlight:
