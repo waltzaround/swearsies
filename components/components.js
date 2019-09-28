@@ -26,7 +26,7 @@ h1 {
 }
 
 p {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 2rem;
     line-height: 1.5;
 }
@@ -42,6 +42,14 @@ button {
     color: #9D00FF;
 }
 
+`
 
+export const Image = styled.img`
+  position: relative;
 
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  background-color: #9d00ff;
+  z-index: 1;
 `

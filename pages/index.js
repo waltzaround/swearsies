@@ -1,16 +1,7 @@
 import Page from '../components/Page'
-import styled from 'styled-components'
-import { Container, ContainerA } from '../components/components'
+import { Container, ContainerA, Image} from '../components/components'
 
-const Image = styled.img`
-  position: relative;
 
-  height: 100%;
-  overflow: hidden;
-  object-fit: cover;
-  background-color: #9d00ff;
-  z-index: 1;
-`
 
 const Index = () => (
   <Page>
