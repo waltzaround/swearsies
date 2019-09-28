@@ -1,9 +1,9 @@
 import Page from '../components/Page'
-import { Container, ContainerA, Image} from '../components/components'
+import { Contain, ContainerA, Image} from '../components/components'
 
 const Confirm = () => (
     <Page>
-    <Container>
+    <Contain>
       <ContainerA>
         <Image src='./static/welcome.png' />
       </ContainerA>
@@ -13,7 +13,7 @@ const Confirm = () => (
         <h5>This app sends $5 every time you swear into your swear jar. Are you sure you want to continue?</h5>
         <button>Confirm</button>
       </ContainerA>
-    </Container>
+    </Contain>
   </Page>
 )
 export default Confirm

@@ -1,18 +1,23 @@
 import Page from '../components/Page'
-import { Container, ContainerA, Image } from '../components/components'
+import { Contain, ContainerA, Image } from '../components/components'
+import Link from 'next/link';
 
 const Index = () => (
   <Page>
-    <Container>
+    <Contain>
       <ContainerA>
         <Image src='./static/welcome.png' />
       </ContainerA>
       <ContainerA>
         <h1>Swearsies</h1>
         <p>Swearsies is a digital swear jar for your google home.</p>
+        <Link href='/confirm'>
+            <a>
         <button>Get Started</button>
+        </a>
+        </Link>
       </ContainerA>
-    </Container>
+    </Contain>
   </Page>
 )
 export default Index
