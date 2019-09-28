@@ -8,8 +8,9 @@ const app = express()
 
 app.use(cookieParser())
 app.use(bodyParser.json())
-app.use(express.static('public'))
-app.use('/',express.static(__dirname + 'public'))
+// app.use('/site',express.static(path.join(__dirname,'public/index.html')))
+// app.use('/',express.static(path.join(__dirname,'public/index.html')))
+app.use(express.static(path.join(__dirname,'public')))
 // Bad practice to do this
 let access_token
 const clientId = process.env.clientId
@@ -24,7 +25,7 @@ const authClient = new AuthClient(clientId, clientSecret, redirectUri)
 const apiClient = new ApiClient('https://api.bankengine.nz/')
 
 // initial log in -- OAuth dance here
-app.get("/", (req, res) => {
+app.get('/auth', (req, res) => {
     // Generate auth url, nonce is not used since we use authorization_code grant
     const authURL = authClient.generateAuthorizationURL(scopes, "nonce", "state")
     res.redirect(authURL) 
@@ -37,7 +38,7 @@ app.get('/callback', async (req, res) => {
     access_token = tokens.access_token
 
     // res.cookie('access_token',accessToken)
-    res.redirect(`http://localhost:5000/shit`)
+    res.redirect(`http://localhost:5000/site`)
 })
 
 
@@ -74,9 +75,9 @@ app.post('/deductSwearCost/', async (req, res) => {
     try {
         const { receiverAccount } = req.body
         const paymentRequest = {
-            fromAccount: accountNumber,
-            toAccount: receiverAccount,
-            amount: 1.00,
+            fromAccount: '99-2630-8228880-00',
+            toAccount: '99-1526-1969322-00',
+            amount: 5.00,
             from: {
                 particulars: 'Swear-jar',
                 code: '',
@@ -89,17 +90,16 @@ app.post('/deductSwearCost/', async (req, res) => {
             }
         }
         result = await apiClient.postPayment(access_token, paymentRequest)
-
-    } catch (error) {
-        console.error(error)
-        res.sendStatus(500)
-    }
+        } catch (error) {
+            console.error(error)
+            res.sendStatus(500)
+        }
 
     res.send(result)
 })
 
 app.get('/site', (req, res)=> {
-    res.sendfile('public/index.html')
+    res.sendFile(`${__dirname}/public/confirm.html`)
 })
 
 app.listen(5000, () => console.log("BankEngine server listening on port 5000..."))
