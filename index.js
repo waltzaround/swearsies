@@ -2,14 +2,13 @@ require('dotenv').config()
 const { AuthClient, ApiClient } = require("bankengine-js-sdk")
 const path = require('path')
 const express = require("express")
+const R = require('ramda')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const app = express()
 
 app.use(cookieParser())
 app.use(bodyParser.json())
-// app.use('/site',express.static(path.join(__dirname,'public/index.html')))
-// app.use('/',express.static(path.join(__dirname,'public/index.html')))
 app.use(express.static(path.join(__dirname,'public')))
 // Bad practice to do this
 let access_token
@@ -70,13 +69,15 @@ app.get('/account/:id', async (req, res) => {
 app.post('/deductSwearCost/', async (req, res) => {
     const accountList = await apiClient.getAccounts(access_token)
     const { data } = accountList
-    const senderAccount = data[0]
+    const transactionalAccount = data.filter(account => account.accountType  === 'transactional')
+    const senderAccount = transactionalAccount[0]
     const { accountNumber } = senderAccount
+
     try {
         const { receiverAccount } = req.body
         const paymentRequest = {
-            fromAccount: '99-2630-8228880-00',
-            toAccount: '99-1526-1969322-00',
+            fromAccount: accountNumber,
+            toAccount: receiverAccount,
             amount: 5.00,
             from: {
                 particulars: 'Swear-jar',
@@ -92,7 +93,7 @@ app.post('/deductSwearCost/', async (req, res) => {
         result = await apiClient.postPayment(access_token, paymentRequest)
         } catch (error) {
             console.error(error)
-            res.sendStatus(500)
+            return res.sendStatus(500)
         }
 
     res.send(result)
