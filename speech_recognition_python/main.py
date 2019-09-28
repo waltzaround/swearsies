@@ -164,6 +164,5 @@ def main():
         # Now, put the transcription responses to use.
         listen_print_loop(responses)
 
-
 if __name__ == '__main__':
     main()

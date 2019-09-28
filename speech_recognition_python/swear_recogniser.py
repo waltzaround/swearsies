@@ -60,4 +60,4 @@ def local_test():
     sr.search_for_swears("But shit you ferry boy")
 
 
-local_test()
+# local_test()
