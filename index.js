@@ -75,8 +75,8 @@ app.post('/deductSwearCost/', async (req, res) => {
     try {
         const { receiverAccount } = req.body
         const paymentRequest = {
-            fromAccount: '99-2630-8228880-00',
-            toAccount: '99-1526-1969322-00',
+            fromAccount: accountNumber,
+            toAccount: receiverAccount,
             amount: 5.00,
             from: {
                 particulars: 'Swear-jar',
