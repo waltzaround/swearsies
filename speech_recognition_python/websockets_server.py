@@ -168,7 +168,6 @@ def listen_print_loop(responses):
 
 
             if SWEAR_RECOGNISER.search_for_swears(transcript):
-                pprint.pprint(clients)
                 for client in clients:
                     client.send_message("Swear word recognised") 
 

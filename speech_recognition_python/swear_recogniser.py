@@ -25,6 +25,7 @@ class SwearRecogniser:
 
         if len(recognised_swears) != 0:
             self.swear_recognised(recognised_swears)
+            print("Swear detected:", recognised_swears[0])
             return True
         else :
            return False
