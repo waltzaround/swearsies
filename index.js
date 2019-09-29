@@ -78,7 +78,7 @@ app.post('/deductSwearCost/', async (req, res) => {
         const paymentRequest = {
             fromAccount: accountNumber,
             toAccount: receiverAccount,
-            amount: 5.00,
+            amount: 2.00,
             from: {
                 particulars: 'Swear-jar',
                 code: '',
