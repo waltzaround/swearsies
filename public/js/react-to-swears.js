@@ -1,3 +1,16 @@
+var exampleSocket = new WebSocket("ws://localhost:8000");
+
+exampleSocket.onopen = function (event) {
+    exampleSocket.send("Here's some text that the server is urgently awaiting!"); 
+  };
+
+exampleSocket.onmessage = function (event) {
+    console.log(event.data);
+    reactToSwear();
+  }
+
+
+
 function reactStatus(){
     $( ".MonkeyHeroImage" ).attr("src", "./static/3.png")
     var el = parseInt($('#TotalCost').text())
