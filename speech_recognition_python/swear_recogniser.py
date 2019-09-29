@@ -25,12 +25,15 @@ class SwearRecogniser:
 
         if len(recognised_swears) != 0:
             self.swear_recognised(recognised_swears)
+            return True
+        else :
+           return False
 
     @staticmethod
     def swear_recognised(recognised_swears: list):
         print("Swear recognised:" + ' '.join(recognised_swears))
 
-        receiverAccountNumber = "99-7923-7519505-00"
+        receiverAccountNumber = "99-6652-7925438-50"
 
         request_data = {
             'receiverAccount' : receiverAccountNumber
