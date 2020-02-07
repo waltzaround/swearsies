@@ -4,11 +4,13 @@
 
 
 # swearsies
-bankengine 2019 hackathon
 
-Frontend for a webapp that takes money out of your account every time you swear
 
-Built with the BankEngine API, and Google Cloud Voice to Text - this part works
+Frontend for a webapp that takes money out of your account every time you swear. Built for the BankEngine 2019 hackathon.
+
+Built with:
+- BankEngine Payments API - for payment transfer
+- Google Cloud Voice to Text - for swearing detection
 
 @TODO: Port it to Google's Interactive Canvas lol
 
