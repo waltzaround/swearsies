@@ -9,6 +9,7 @@ Frontend for a webapp that takes money out of your account every time you swear.
 
 
 Demo: https://www.youtube.com/watch?v=VUnafSNlgVY
+
 Full pitch: https://www.youtube.com/watch?v=0V-QAKHCCyc
 
 Built with:
