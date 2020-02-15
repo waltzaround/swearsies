@@ -5,8 +5,11 @@
 
 # swearsies
 
-
 Frontend for a webapp that takes money out of your account every time you swear. Built for the BankEngine 2019 hackathon.
+
+
+Demo: https://www.youtube.com/watch?v=VUnafSNlgVY
+Full pitch: https://www.youtube.com/watch?v=0V-QAKHCCyc
 
 Built with:
 - **BankEngine Payments API** - for payment transfer
