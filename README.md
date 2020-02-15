@@ -16,6 +16,6 @@ Built with:
 - **Google Cloud Voice to Text** - for swearing detection
 - **Node.js** - for a somewhat working web framework
 
-@TODO: Port it to Google's Interactive Canvas lol
+@TODO: Port it to Google's Interactive Canvas so that it actually runs on a nest hub
 
 Built by Minh Phu Lai, John Cave, Essa Thaver, Tristan Kells, and Walter Lim
