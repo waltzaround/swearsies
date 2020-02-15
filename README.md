@@ -17,5 +17,6 @@ Built with:
 - **Node.js** - for a somewhat working web framework
 
 @TODO: Port it to Google's Interactive Canvas so that it actually runs on a nest hub
+@TODO: Figure out some sort of better auth method between home and the account - if we were to actually productionize this it would need something better
 
 Built by Minh Phu Lai, John Cave, Essa Thaver, Tristan Kells, and Walter Lim
